@@ -1,5 +1,5 @@
 var express = require('express');
-const { crearProduct, getProducts, deletePutProducts } = require('../controllers/products');
+const { crearProduct, getProducts, deletePutProducts, patchProducts } = require('../controllers/products');
 var router = express.Router();
 
 /* GET home page. */
@@ -23,6 +23,9 @@ router.delete('/products/:id', deletePutProducts);
 
 // Put Producto
 router.put('/products/:id', deletePutProducts);
+
+//Patch Product
+router.patch('/products/:id', patchProducts );
 
 
 
